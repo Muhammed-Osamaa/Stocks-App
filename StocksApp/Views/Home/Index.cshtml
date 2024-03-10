@@ -1,0 +1,66 @@
+﻿@using Models
+@model StockProperties
+@{
+    ViewBag.Title = "Home";
+}
+
+<div class="box trading-panel">
+    <div class="flex trading-panel-flex">
+        <div id="stock-price-panel">
+            <div class="stock">
+                <h1 class="stock-title">
+                    @Model.StockSymbole
+                </h1>
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Current:</td>
+                            <th>
+                                <small>$</small>
+                                <span class="price">
+                                </span>
+                                @Model.CurrentPrice.ToString("N")
+
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <td>Open Price:</td>
+                            <th>
+                                <small>$</small>
+                                <span class="price">
+                                </span>
+                                @Model.OpenPrice.ToString("N")
+
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <td>Highest Price:</td>
+                            <th>
+                                <small>$</small>
+                                <span class="price">
+                                </span>
+                                @Model.HighPrice.ToString("N")
+
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <td>Lowest Price:</td>
+                            <th>
+                                <small>$</small>
+                                <span class="price">
+                                </span>
+                                @Model.LowtPrice.ToString("N")
+
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
